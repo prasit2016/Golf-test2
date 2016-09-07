@@ -1,0 +1,28 @@
+@mixin title-text {
+  font-size: 20pt;
+  font-weight: bold;
+  font-family: Georgia, serif;
+}
+
+$textcolor: #ffffff;
+
+.heading { @include title-text; }
+.title { @include title-text; }
+
+p {
+	color: $textcolor;
+}
+
+p {
+	font-size: 10pt;
+	a {
+		font-size: 12pt;
+	}
+}
+
+.button { width: 100px; height: 50px; }
+
+.button-blue {
+	@extend .button;
+	background: blue;
+}
